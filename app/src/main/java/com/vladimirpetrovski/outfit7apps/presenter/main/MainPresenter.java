@@ -12,8 +12,9 @@ public class MainPresenter implements MainContract.Presenter {
   private AppsLauncher appsLauncher;
 
   @Inject
-  MainPresenter(AppsRepository appsRepository) {
+  MainPresenter(AppsRepository appsRepository, AppsLauncher appsLauncher) {
     this.appsRepository = appsRepository;
+    this.appsLauncher = appsLauncher;
   }
 
   @Override
