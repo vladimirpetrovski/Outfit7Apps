@@ -1,7 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
-  android:layout_width="wrap_content"
-  android:layout_height="wrap_content">
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:padding="@dimen/medium"
+  android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+  <TextView
+    android:id="@+id/details_title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+    tools:text="Tom"/>
+
+  <TextView
+    android:id="@+id/details_package_name"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:text="com.outfit7.tom"/>
+
+  <TextView
+    android:id="@+id/details_version_code"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:text="Version name: 43"/>
+
+  <TextView
+    android:id="@+id/details_version_name"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:text="Version name: 1.2.2"/>
+
+  <Button
+    style="@style/Widget.AppCompat.Button.Borderless"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="end"
+    android:text="@string/open"/>
+
+</LinearLayout>
