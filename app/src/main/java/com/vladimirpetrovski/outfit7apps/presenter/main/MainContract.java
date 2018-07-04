@@ -10,6 +10,8 @@ public interface MainContract {
   interface MainView extends BaseView<Presenter> {
 
     void renderApps(List<App> apps);
+
+    void showDialog(String packageName);
   }
 
   interface Presenter extends BasePresenter<MainView> {

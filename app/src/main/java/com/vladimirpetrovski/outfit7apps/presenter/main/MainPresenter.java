@@ -1,6 +1,5 @@
 package com.vladimirpetrovski.outfit7apps.presenter.main;
 
-import com.vladimirpetrovski.outfit7apps.domain.AppsLauncher;
 import com.vladimirpetrovski.outfit7apps.domain.AppsRepository;
 import com.vladimirpetrovski.outfit7apps.presenter.main.MainContract.MainView;
 import javax.inject.Inject;
@@ -9,12 +8,10 @@ public class MainPresenter implements MainContract.Presenter {
 
   private MainView view;
   private AppsRepository appsRepository;
-  private AppsLauncher appsLauncher;
 
   @Inject
-  MainPresenter(AppsRepository appsRepository, AppsLauncher appsLauncher) {
+  MainPresenter(AppsRepository appsRepository) {
     this.appsRepository = appsRepository;
-    this.appsLauncher = appsLauncher;
   }
 
   @Override
@@ -30,7 +27,7 @@ public class MainPresenter implements MainContract.Presenter {
 
   @Override
   public void onAppClicked(String packageName) {
-    appsLauncher.launchPackage(packageName);
+    view.showDialog(packageName);
   }
 
   private void initUi() {

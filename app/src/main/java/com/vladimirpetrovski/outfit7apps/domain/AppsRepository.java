@@ -6,4 +6,6 @@ import java.util.List;
 public interface AppsRepository {
 
   List<App> getInstalledApps();
+
+  App getApp(String packageName);
 }
