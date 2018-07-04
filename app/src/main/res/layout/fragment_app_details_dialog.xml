@@ -33,6 +33,7 @@
     tools:text="Version name: 1.2.2"/>
 
   <Button
+    android:id="@+id/details_open_btn"
     style="@style/Widget.AppCompat.Button.Borderless"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"

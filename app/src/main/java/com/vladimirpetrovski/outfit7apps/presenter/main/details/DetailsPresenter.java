@@ -11,6 +11,7 @@ public class DetailsPresenter implements DetailsContract.Presenter {
   private DetailsView view;
   private AppsRepository appsRepository;
   private AppsLauncher appsLauncher;
+  private App app;
 
   @Inject
   DetailsPresenter(AppsRepository appsRepository, AppsLauncher appsLauncher) {
@@ -30,16 +31,16 @@ public class DetailsPresenter implements DetailsContract.Presenter {
 
   @Override
   public void loadApp(String packageName) {
-    App app = appsRepository.getApp(packageName);
-    initUi(app);
+    app = appsRepository.getApp(packageName);
+    initUi();
   }
 
   @Override
-  public void onAppClicked(String packageName) {
-    appsLauncher.launchPackage(packageName);
+  public void onAppClicked() {
+    appsLauncher.launchPackage(app.getPackageName());
   }
 
-  private void initUi(App app) {
+  private void initUi() {
     view.setTitle(app.getName());
     view.setPackageName(app.getPackageName());
     view.setVersionCode(app.getVersionCode());

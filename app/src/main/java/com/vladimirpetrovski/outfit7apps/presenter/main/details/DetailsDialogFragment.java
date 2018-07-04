@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import com.vladimirpetrovski.outfit7apps.R;
 import com.vladimirpetrovski.outfit7apps.presenter.main.details.DetailsContract.DetailsView;
 import dagger.android.DaggerDialogFragment;
@@ -75,5 +76,10 @@ public class DetailsDialogFragment extends DaggerDialogFragment implements Detai
   @Override
   public void setVersionName(String versionName) {
     this.versionName.setText(getString(R.string.version_name_format, versionName));
+  }
+
+  @OnClick(R.id.details_open_btn)
+  void onOpenBtnClick() {
+    presenter.onAppClicked();
   }
 }

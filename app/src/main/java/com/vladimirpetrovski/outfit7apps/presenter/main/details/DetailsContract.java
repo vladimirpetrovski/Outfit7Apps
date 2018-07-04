@@ -21,7 +21,7 @@ public interface DetailsContract {
 
     void loadApp(String packageName);
 
-    void onAppClicked(String packageName);
+    void onAppClicked();
   }
 
 }
