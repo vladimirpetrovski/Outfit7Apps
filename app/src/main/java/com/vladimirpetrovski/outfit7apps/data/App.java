@@ -1,12 +1,14 @@
 package com.vladimirpetrovski.outfit7apps.data;
 
-import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.Value;
 
-@Data
+@Value
+@EqualsAndHashCode
 public class App {
-  String name;
-  String imagePath;
+
   String packageName;
-  String versionCode;
+  String name;
+  long versionCode;
   String versionName;
 }

@@ -1,8 +1,8 @@
 package com.vladimirpetrovski.outfit7apps.presenter.main;
 
+import com.vladimirpetrovski.outfit7apps.domain.AppsLauncher;
 import com.vladimirpetrovski.outfit7apps.domain.AppsRepository;
 import com.vladimirpetrovski.outfit7apps.presenter.main.MainContract.MainView;
-import com.vladimirpetrovski.outfit7apps.domain.AppsLauncher;
 import javax.inject.Inject;
 
 public class MainPresenter implements MainContract.Presenter {
